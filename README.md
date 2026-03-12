@@ -34,3 +34,25 @@ External APIs:
 ---
 
 ## Project Structure
+
+weather-app
+│
+├── backend
+│ ├── main.py
+│ └── weather_engine.py
+│
+└── frontend
+├── index.html
+├── script.js
+└── styles.css
+
+## Learning Goals
+
+This project helped me understand:
+
+- REST APIs
+- FastAPI backend development
+- Frontend–backend communication
+- CORS handling
+- JSON data handling
+- Full-stack application flow
