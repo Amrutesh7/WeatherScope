@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <main class="container">
+
+    <header class="header">
+      <div class="header-eyebrow">Live Conditions</div>
+      <h1 class="header-title">Weather<em>Scope</em></h1>
+    </header>
+
+    <section class="search-section">
+      <div class="input-wrap">
+        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input
+          type="text"
+          id="cityInput"
+          class="city-input"
+          placeholder="Enter a city…"
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </div>
+      <button id="searchBtn" class="search-btn">
+        <span class="btn-text">Search</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </section>
+
+    <div id="loader" class="loader hidden">
+      <div class="loader-bar"></div>
+    </div>
+
+    <section id="weatherCard" class="weather-card hidden">
+      <div class="card-inner">
+        <div class="card-city-row">
+          <div class="card-location-icon">◈</div>
+          <h2 class="card-city" id="cardCity">–</h2>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-stats">
+          <div class="stat">
+            <div class="stat-label">Temperature</div>
+            <div class="stat-value" id="cardTemp">–</div>
+            <div class="stat-unit">°C</div>
+          </div>
+          <div class="stat-separator"></div>
+          <div class="stat">
+            <div class="stat-label">Wind Speed</div>
+            <div class="stat-value" id="cardWind">–</div>
+            <div class="stat-unit">km/h</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="errorCard" class="error-card hidden">
+      <div class="error-icon">⚠</div>
+      <p class="error-message" id="errorMessage">Something went wrong.</p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
